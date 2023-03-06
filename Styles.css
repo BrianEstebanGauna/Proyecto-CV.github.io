@@ -1,35 +1,30 @@
+/* pagina */
+
 body {
   margin: 0;
+  background-color: rgb(252, 238, 211);
 }
 
-img {
-    border-radius: 50%;
-    border-style: double;
-    border-width: 12px;
-    border-color: rgb(103, 104, 104);
-  }
+/* Menu */
 
-  .hero-image{
-    background-image: linear-gradient(
-      0deg,rgba(0,0,0,0.9),
-      rgba(0,0,0,0.5)
-  ),url("assets/background.jpg");
-    height: 60em;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-.hero-text{
-    font-family: 'Shantell Sans', cursive;
-    text-align: center;
-    position: initial;
-    color: white;
-    font-size: 20px;
-    padding-top: 7%;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
+#list-menu{
+  display: none;
+}
+
+header label{
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-right: 1px solid #ffffff;
+}
+
+header label:hover{
+  cursor: pointer;
+  background: rgba(88, 88, 88, 0.3);
+}
+
+/* Barra de navegacion */
 
 header{
   position: fixed;
@@ -38,30 +33,26 @@ header{
 
 .nav{
   width: 100%;
-  background: #000;
+  background: #000000cc;
   display: flex;
-  
   align-items: center;
   justify-content: space-between;
-  padding: 13px;
-  
 }
 
 .logo{
   font-size: 25px;
   color: #fff;
   font-weight: 100;
+  padding: 7px;
 }
 
 .menu{
   display: flex;
-  
 }
 
 .menu li{
   list-style: none;
-  margin: 10px;
-  
+  margin: -7px 10px -7px 10px;
 }
 
 .menu li a{
@@ -83,6 +74,46 @@ header{
 ul {
   margin-inline-end: 23px;
 }
+
+/* Sobre mi */
+
+.perfil{
+  display: flex;
+  flex-direction: column;
+}
+
+.img-perfil{
+    border-radius: 50%;
+    border-style: double;
+    border-width: 12px;
+    border-color: rgb(103, 104, 104);
+    margin: auto;
+  }
+
+  .hero-image{
+    background-image: linear-gradient(
+      0deg,rgba(0,0,0,0.9),
+      rgba(0,0,0,0.5)
+  ),url("assets/background.jpg");
+    height: 60em;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+.hero-text{
+    font-family: 'Shantell Sans', cursive;
+    text-align: center;
+    position: initial;
+    color: white;
+    font-size: 20px;
+    padding-top: 7%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+/* 3 sección restantes */
 
 .contenedor {
   color: black;
@@ -120,6 +151,8 @@ ul {
   font-size: 27px;
 }
 
+/* Footer */
+
 .datos{
   color: black;
   padding: 200px 12px;
@@ -146,3 +179,101 @@ ul {
     padding-right: 10%;
     list-style-position: inside;
 }
+
+.text-footer{
+  list-style-type: none;
+}
+
+/* Vercion mobile */
+
+@media only screen and (max-width: 768px) {
+
+  body{
+    background-color: white;
+  }
+
+  /* Menu */
+
+  .logo{
+    display: none;
+  }
+
+  header label {
+    display: block;
+  }
+
+  .nav{
+    align-items: baseline;
+  }
+
+/* Barra de navegacion */
+
+.nav{
+  flex-direction: column;
+}
+
+.menu{
+  font-size: 40px;
+  flex-direction: column;
+  display: none;
+}
+
+.menu li{
+  margin: 10px 20px 10px 20px;
+}
+
+  /* Sobre mi */
+
+  .img-perfil {
+    width: 50%;
+    height: 50%;
+    margin-top: 10%;
+  }
+
+.hero-image{
+  height: auto;
+}
+
+.hero-text{
+  padding-bottom: 10%;
+}
+
+
+  /* 3 sección restantes */
+
+  .texto{
+    padding-left: 8px;
+    font-size: 16px;
+  }
+
+  #image {
+    height: 150px;
+    width: 100%;
+  }
+
+  .contenedor {
+    flex-direction: column;
+  }
+
+/* Footer */
+
+.img-datos{
+  height: auto;
+}
+
+.texto-datos{
+    font-size: 17px;
+    padding-top: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+/* Boton */
+
+#list-menu:checked ~ .menu {
+  display: block;
+
+}
+
+}
+
